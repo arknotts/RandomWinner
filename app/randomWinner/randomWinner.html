@@ -1,0 +1,6 @@
+<person-list (onPersonAdded)="onPersonAdded($event)">Loading persons...</person-list>
+
+<br>
+<button (click)="pickWinner()" class="btn btn-info btn-block" *ngIf="personList.length > 0">Draw Winner</button>
+
+<h1 *ngIf="winnerPerson != null" class="text-success">Winner: {{winnerPerson.name}}</h1>

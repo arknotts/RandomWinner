@@ -1,0 +1,19 @@
+<div class="media" *ngFor="let p of persons; let i = index">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="https://api.adorable.io/avatars/60/{{p.name}}" alt="">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{p.name}}</h4>
+    ...
+  </div>
+</div>
+
+<br><br>
+<div class="input-group">
+    <input type="text" class="form-control" [(ngModel)]="newPerson.name" (keyup.enter)="add()" />
+    <span class="input-group-btn">
+    <button (click)="add()" class="btn btn-primary" type="button">Add</button>
+    </span>
+</div>
